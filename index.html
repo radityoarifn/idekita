@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Data dari Database</title>
+		<link rel="stylesheet" href="assets/css/style.css" />
+	</head>
+	<body>
+		<h1>Data Pengguna</h1>
+		<div id="loading" class="loading">Memuat data...</div>
+		<div id="error" class="error" style="display: none"></div>
+		<div id="login-form" class="login-form">
+			<h2>Login</h2>
+			<form id="login">
+				<div>
+					<label>Username:</label>
+					<input type="text" id="username" required />
+				</div>
+				<div>
+					<label>Password:</label>
+					<input type="password" id="password" required />
+				</div>
+				<button type="submit">Login</button>
+			</form>
+		</div>
+		<div id="data-section" style="display: none">
+			<form id="search-form" class="search-form">
+				<input type="text" id="search" placeholder="Cari username..." />
+				<button type="submit">Cari</button>
+			</form>
+			<table id="data-table">
+				<thead>
+					<tr>
+						<th>ID</th>
+						<th>Username</th>
+					</tr>
+				</thead>
+				<tbody id="data-body"></tbody>
+			</table>
+			<div id="pagination">
+				<button id="prev-page" disabled>Previous</button>
+				<span id="page-info"></span>
+				<button id="next-page">Next</button>
+			</div>
+			<button id="logout">Logout</button>
+		</div>
+		<script src="assets/js/script.js"></script>
+	</body>
+</html>
